@@ -1,0 +1,5 @@
+<map id="ProductoPunto" name="ProductoPunto">
+<area shape="rect" id="node2" href="$classResuelveCGM.html" title="Clase para resolución del sistema lineal mediante CGM standard. " alt="" coords="144,80,252,107"/>
+<area shape="rect" id="node3" href="$classResuelveCGMBandDisp.html" title="Clase para resolución del sistema lineal mediante CGM. " alt="" coords="5,162,175,189"/>
+<area shape="rect" id="node4" href="$classResuelveCGMPrecondicionadoBandDisp.html" title="Clase para resolución del sistema lineal mediante CGM. " alt="" coords="199,155,413,196"/>
+</map>

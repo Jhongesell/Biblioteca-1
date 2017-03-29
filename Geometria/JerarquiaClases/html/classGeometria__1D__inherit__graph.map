@@ -1,0 +1,6 @@
+<map id="Geometria_1D" name="Geometria_1D">
+<area shape="rect" id="node3" href="$classGeometria__1DHeterogenea.html" title="Clase para generar una geometría heterogénea en una dimensión " alt="" coords="5,155,204,181"/>
+<area shape="rect" id="node4" href="$classGeometria__1DHomogenea.html" title="Clase para generar una geometría homogénea en una dimensión " alt="" coords="229,155,423,181"/>
+<area shape="rect" id="node5" href="$classGeometria__1DLeerArchivo.html" title="Clase para generar leer una geometría en una dimensión " alt="" coords="448,155,639,181"/>
+<area shape="rect" id="node2" href="$classGeometria.html" title="Clase base para generar una geometria. " alt="" coords="281,5,371,32"/>
+</map>

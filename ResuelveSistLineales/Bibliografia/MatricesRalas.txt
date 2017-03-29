@@ -1,0 +1,15 @@
+http://www.netlib.org/utk/people/JackDongarra/la-sw.html
+
+http://en.wikipedia.org/wiki/Sparse_matrix
+
+http://docs.scipy.org/doc/scipy/reference/sparse.html
+
+http://eigen.tuxfamily.org/dox/TutorialSparse.html
+
+http://www.mathworks.com/help/matlab/ref/sparse.html
+
+http://www.math.mtu.edu/~msgocken/intro/node18.html
+
+http://www.cise.ufl.edu/research/sparse/matrices/
+
+http://www.boost.org/doc/libs/1_53_0/libs/numeric/ublas/doc/matrix_sparse.htm

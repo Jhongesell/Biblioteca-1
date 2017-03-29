@@ -1,0 +1,6 @@
+<map id="BCGM" name="BCGM">
+<area shape="rect" id="node3" href="$classResuelveCGM.html" title="Clase para resolución del sistema lineal mediante CGM standard. " alt="" coords="144,155,252,181"/>
+<area shape="rect" id="node2" href="$classResuelveSistemaLineal.html" title="Clase para resolución del sistema lineal. " alt="" coords="114,5,282,32"/>
+<area shape="rect" id="node4" href="$classResuelveCGMBandDisp.html" title="Clase para resolución del sistema lineal mediante CGM. " alt="" coords="5,237,175,263"/>
+<area shape="rect" id="node5" href="$classResuelveCGMPrecondicionadoBandDisp.html" title="Clase para resolución del sistema lineal mediante CGM. " alt="" coords="199,229,413,271"/>
+</map>

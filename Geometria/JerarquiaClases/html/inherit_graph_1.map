@@ -1,0 +1,12 @@
+<map id="RepresentaciÃ³n grÃ¡fica de la clase" name="RepresentaciÃ³n grÃ¡fica de la clase">
+<area shape="rect" id="node1" href="$classGeometria.html" title="Clase base para generar una geometria. " alt="" coords="5,164,96,191"/>
+<area shape="rect" id="node2" href="$classGeometria__1D.html" title="Clase para generar una geometría en una dimensión " alt="" coords="144,101,259,128"/>
+<area shape="rect" id="node6" href="$classGeometria__2D.html" title="Clase base para generar una geometria en 2D. " alt="" coords="144,164,259,191"/>
+<area shape="rect" id="node9" href="$classGeometria__3D.html" title="Clase base para generar una geometria en 3D. " alt="" coords="144,240,259,267"/>
+<area shape="rect" id="node3" href="$classGeometria__1DHeterogenea.html" title="Clase para generar una geometría heterogénea en una dimensión " alt="" coords="307,5,505,32"/>
+<area shape="rect" id="node4" href="$classGeometria__1DHomogenea.html" title="Clase para generar una geometría homogénea en una dimensión " alt="" coords="309,56,503,83"/>
+<area shape="rect" id="node5" href="$classGeometria__1DLeerArchivo.html" title="Clase para generar leer una geometría en una dimensión " alt="" coords="311,107,501,133"/>
+<area shape="rect" id="node7" href="$classGeometria__2DRectangulos.html" title="Clase para generar una geometría homogénea en dos dimensiones usando rectángulos. " alt="" coords="310,157,502,184"/>
+<area shape="rect" id="node8" href="$classGeometria__2DTriangulos.html" title="Clase para generar una geometría homogénea en dos dimensiones usando triángulos. " alt="" coords="317,208,495,235"/>
+<area shape="rect" id="node10" href="$classGeometria__3DOrtoedros.html" title="Clase para generar una geométria ortoedrica 3D. " alt="" coords="317,259,495,285"/>
+</map>

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>EjemploGaussQuad.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.8 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>PÃ¡gina&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>PÃ¡ginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">EjemploGaussQuad.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>Esta clase implementa los componentes para integrar una funcion mediante la cuadratura Gauss-Legendre usando de 2 a 10 puntos</p>
+<div class="fragment"><div class="line"><span class="comment">// Programa para integrar una funcion mediante la cuadratura Gauss-Legendre usando de       //</span></div>
+<div class="line"><span class="comment">// 2 a 10 puntos                                                                            //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Análisis y Diseño y Programación:                                                        //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Nombre:   Antonio Carrillo Ledesma                                                       //</span></div>
+<div class="line"><span class="comment">// E-mail:   acl@www.mmc.igeofcu.unam.mx                                                    //</span></div>
+<div class="line"><span class="comment">// Página:   http://www.mmc.igeofcu.unam.mx/acl                                             //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Este programa es software libre. Puede redistribuirlo y/o modificarlo                    //</span></div>
+<div class="line"><span class="comment">// bajo los términos de la Licencia Pública General de GNU según es                         //</span></div>
+<div class="line"><span class="comment">// publicada por la Free Software Foundation, bien de la versión 2 de                       //</span></div>
+<div class="line"><span class="comment">// dicha Licencia o bien (según su elección) de cualquier versión                           //</span></div>
+<div class="line"><span class="comment">// posterior.                                                                               //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Este programa se distribuye con la esperanza de que sea útil, pero SIN                   //</span></div>
+<div class="line"><span class="comment">// NINGUNA GARANTÍA, incluso sin la garantía MERCANTIL implícita o sin                      //</span></div>
+<div class="line"><span class="comment">// garantizar la CONVENIENCIA PARA UN PROPÓSITO PARTICULAR. Véase la                        //</span></div>
+<div class="line"><span class="comment">// Licencia Pública General de GNU para más detalles.                                       //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Debería haber recibido una copia de la Licencia Pública General junto                    //</span></div>
+<div class="line"><span class="comment">// con este programa. Si no ha sido así, escriba a la Free Software                         //</span></div>
+<div class="line"><span class="comment">// Foundation, Inc., en 675 Mass Ave, Cambridge, MA 02139, EEUU.                            //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment"></span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="GaussQuad_8hpp.html">GaussQuad.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;Ctrl_vis.hpp&quot;</span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Funcion Principal para mostrar el uso de la integracion por cuadratura Gauss-Legendre</span></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">//Se usan 8 puntos de cuadratura</span></div>
+<div class="line">   <span class="keywordtype">int</span> k, PUNTOS_INTEGRAR = 8;</div>
+<div class="line">   ldouble PX[PUNTOS_INTEGRAR];</div>
+<div class="line">   ldouble FX[PUNTOS_INTEGRAR];</div>
+<div class="line"></div>
+<div class="line">   <a name="_a0"></a><a class="code" href="classGaussQuad.html">GaussQuad</a> integ(-1.0,1.0,PUNTOS_INTEGRAR,PX);</div>
+<div class="line">   Ctrl_visualizacion a;</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Integral en una dimension</span></div>
+<div class="line">   <span class="keywordflow">for</span> (k = 0; k &lt; PUNTOS_INTEGRAR; k++) FX[k] = PX[k]*PX[k] + 3.0*PX[k] + 7.0;</div>
+<div class="line">   printf(<span class="stringliteral">&quot;El resultado es&quot;</span>);</div>
+<div class="line">   a.visualiza_n(integ.<a name="a1"></a><a class="code" href="classGaussQuad.html#a587ba8ac43ad9c7a9c75202bff389dbc">integra</a>(FX));</div>
+<div class="line">   printf(<span class="stringliteral">&quot;, debe de ser 14.666667\n&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Integral en dos dimensiones</span></div>
+<div class="line">   ldouble WX[PUNTOS_INTEGRAR];</div>
+<div class="line">   <a class="code" href="classGaussQuad.html">GaussQuad</a> in(-1.0,1.0,PUNTOS_INTEGRAR,PX,WX);</div>
+<div class="line">   <span class="keywordtype">int</span> j, i;</div>
+<div class="line">   ldouble x = 0.0;</div>
+<div class="line">   <span class="keywordflow">for</span> (i = 0; i &lt; PUNTOS_INTEGRAR; i++)</div>
+<div class="line">   {</div>
+<div class="line">      <span class="keywordflow">for</span> (j = 0; j &lt; PUNTOS_INTEGRAR; j++)</div>
+<div class="line">      {</div>
+<div class="line">         x += WX[i]*WX[j]*( (PX[j]*PX[j]*PX[j]-1.0)*((PX[i]-1.0)*(PX[i]-1.0)) );</div>
+<div class="line">      }</div>
+<div class="line">   }</div>
+<div class="line">   printf(<span class="stringliteral">&quot;el resultado es&quot;</span>);</div>
+<div class="line">   a.visualiza_n(x);</div>
+<div class="line">   printf(<span class="stringliteral">&quot;, debe de ser -5.333333\n&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Integral en tres dimensiones</span></div>
+<div class="line">   x = 0.0;</div>
+<div class="line">   <span class="keywordflow">for</span> (i = 0; i &lt; PUNTOS_INTEGRAR; i++)</div>
+<div class="line">   {</div>
+<div class="line">      <span class="keywordflow">for</span> (j = 0; j &lt; PUNTOS_INTEGRAR; j++)</div>
+<div class="line">      {</div>
+<div class="line">         <span class="keywordflow">for</span> (k = 0; k &lt; PUNTOS_INTEGRAR; k++)</div>
+<div class="line">         {</div>
+<div class="line">            x += WX[i]*WX[j]*WX[k]*( (PX[k]*PX[k])*(PX[j]*PX[j]-1.0)*(PX[i]*PX[i]*PX[i]*PX[i]-2.0) );</div>
+<div class="line">         }</div>
+<div class="line">      }</div>
+<div class="line">   }</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">   printf(<span class="stringliteral">&quot;el resultado es&quot;</span>);</div>
+<div class="line">   a.visualiza_n(x);</div>
+<div class="line">   printf(<span class="stringliteral">&quot;, debe de ser 3.2\n&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el SÃ¡bado, 20 de Febrero de 2016 08:53:13 por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

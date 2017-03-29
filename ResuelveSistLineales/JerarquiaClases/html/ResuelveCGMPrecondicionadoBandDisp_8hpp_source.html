@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Fichero Fuente ResuelveCGMPrecondicionadoBandDisp.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.8 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>PÃ¡gina&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>PÃ¡ginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ResuelveCGMPrecondicionadoBandDisp.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ResuelveCGMPrecondicionadoBandDisp_8hpp.html">Ir a la documentaciÃ³n de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Clase para resolver un sistema lineal mediante CGM                                       //</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Análisis y Diseño y Programación:                                                        //</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Nombre:   Antonio Carrillo Ledesma                                                       //</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// E-mail:   acl@www.mmc.geofisica.unam.mx                                                  //</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// Página:   http://www.mmc.geofisica.unam.mx/acl                                           //</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// Este programa es software libre. Puede redistribuirlo y/o modificarlo                    //</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// bajo los términos de la Licencia Pública General de GNU según es                         //</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// publicada por la Free Software Foundation, bien de la versión 2 de                       //</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// dicha Licencia o bien (según su elección) de cualquier versión                           //</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// posterior.                                                                               //</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Este programa se distribuye con la esperanza de que sea útil, pero SIN                   //</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// NINGUNA GARANTÍA, incluso sin la garantía MERCANTIL implícita o sin                      //</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// garantizar la CONVENIENCIA PARA UN PROPÓSITO PARTICULAR. Véase la                        //</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// Licencia Pública General de GNU para más detalles.                                       //</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// Debería haber recibido una copia de la Licencia Pública General junto                    //</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// con este programa. Si no ha sido así, escriba a la Free Software                         //</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// Foundation, Inc., en 675 Mass Ave, Cambridge, MA 02139, EEUU.                            //</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef __ResuelveCGMPrecondicionadoBandDisp__</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define __ResuelveCGMPrecondicionadoBandDisp__</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ResuelveCGM_8hpp.html">ResuelveCGM.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="MatrizBandDisp_8hpp.html">MatrizBandDisp.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classResuelveCGMPrecondicionadoBandDisp.html">   47</a></span>&#160;<span class="keyword">class </span><a class="code" href="classResuelveCGMPrecondicionadoBandDisp.html">ResuelveCGMPrecondicionadoBandDisp</a>: <span class="keyword">public</span> <a class="code" href="classResuelveCGM.html">ResuelveCGM</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classResuelveCGMPrecondicionadoBandDisp.html#ab44715947f54b2c9c0ae44a7ce754178">   54</a></span>&#160;   <a class="code" href="classResuelveCGMPrecondicionadoBandDisp.html#ab44715947f54b2c9c0ae44a7ce754178">ResuelveCGMPrecondicionadoBandDisp</a>(<span class="keywordtype">void</span>) : <a class="code" href="classResuelveCGM.html">ResuelveCGM</a>()</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <a class="code" href="classResuelveSistemaLineal.html#a9e5ba9744476c6c83792398ea42cfe23">M</a> = NULL;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <a class="code" href="classResuelveCGM.html#a16f2143be32e4f9d25986d2e3de2b01c">C</a> = NULL;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <a class="code" href="classResuelveSistemaLineal.html#a5d31ebb546fa47c46c5cc95b7faf36fb">RequiereMatriz</a> = <a class="code" href="ResuelveSistemaLineal_8hpp.html#aa08e0e41b07759cffc6983b9bca0f119">REQUIERE_MAT_BAND</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classResuelveCGMPrecondicionadoBandDisp.html#a4fc1677ee72b056326ace67e78dd553c">   64</a></span>&#160;   <a class="code" href="classResuelveCGMPrecondicionadoBandDisp.html#a4fc1677ee72b056326ace67e78dd553c">ResuelveCGMPrecondicionadoBandDisp</a>(<a class="code" href="classMatrizBandDisp.html">MatrizBandDisp</a> *<a class="code" href="classBCGM.html#afa1e495830375b8bde2a973db6bcefba">A</a>, <a class="code" href="classMatriz.html">Matriz</a> *<a class="code" href="classResuelveSistemaLineal.html#a6e75d2b40f3b71f8414ea41e8cac3c86">B</a>) : <a class="code" href="classResuelveCGM.html">ResuelveCGM</a>()</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <a class="code" href="classResuelveSistemaLineal.html#a9e5ba9744476c6c83792398ea42cfe23">M</a> = <a class="code" href="classBCGM.html#afa1e495830375b8bde2a973db6bcefba">A</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <a class="code" href="classResuelveCGM.html#a16f2143be32e4f9d25986d2e3de2b01c">C</a> = <a class="code" href="classResuelveSistemaLineal.html#a6e75d2b40f3b71f8414ea41e8cac3c86">B</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <a class="code" href="classResuelveSistemaLineal.html#a5d31ebb546fa47c46c5cc95b7faf36fb">RequiereMatriz</a> = <a class="code" href="ResuelveSistemaLineal_8hpp.html#aa08e0e41b07759cffc6983b9bca0f119">REQUIERE_MAT_BAND</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classResuelveCGMPrecondicionadoBandDisp.html#a573a9780835260afc008e2e426538652">   76</a></span>&#160;   <a class="code" href="classResuelveCGMPrecondicionadoBandDisp.html#a573a9780835260afc008e2e426538652">ResuelveCGMPrecondicionadoBandDisp</a>(<a class="code" href="classMatrizBandDisp.html">MatrizBandDisp</a> *<a class="code" href="classBCGM.html#afa1e495830375b8bde2a973db6bcefba">A</a>, <a class="code" href="classMatriz.html">Matriz</a> *<a class="code" href="classResuelveSistemaLineal.html#a6e75d2b40f3b71f8414ea41e8cac3c86">B</a>, <a class="code" href="classVector.html">Vector</a> *x, <a class="code" href="classVector.html">Vector</a> *b) : <a class="code" href="classResuelveCGM.html">ResuelveCGM</a>(x,b)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;   {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <a class="code" href="classResuelveSistemaLineal.html#a9e5ba9744476c6c83792398ea42cfe23">M</a> = <a class="code" href="classBCGM.html#afa1e495830375b8bde2a973db6bcefba">A</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <a class="code" href="classResuelveCGM.html#a16f2143be32e4f9d25986d2e3de2b01c">C</a> = <a class="code" href="classResuelveSistemaLineal.html#a6e75d2b40f3b71f8414ea41e8cac3c86">B</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <a class="code" href="classResuelveSistemaLineal.html#a5d31ebb546fa47c46c5cc95b7faf36fb">RequiereMatriz</a> = <a class="code" href="ResuelveSistemaLineal_8hpp.html#aa08e0e41b07759cffc6983b9bca0f119">REQUIERE_MAT_BAND</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classResuelveCGMPrecondicionadoBandDisp.html#ae081a968cbfd45d0d61e006882aa9c0d">   90</a></span>&#160;   <a class="code" href="classResuelveCGMPrecondicionadoBandDisp.html#ae081a968cbfd45d0d61e006882aa9c0d">ResuelveCGMPrecondicionadoBandDisp</a>(<a class="code" href="classMatrizBand.html">MatrizBand</a> *<a class="code" href="classBCGM.html#afa1e495830375b8bde2a973db6bcefba">A</a>, <a class="code" href="classMatriz.html">Matriz</a> *<a class="code" href="classResuelveSistemaLineal.html#a6e75d2b40f3b71f8414ea41e8cac3c86">B</a>, <a class="code" href="classVector.html">Vector</a> *x, <a class="code" href="classVector.html">Vector</a> *b, ldouble ep, <span class="keywordtype">int</span> iter) : <a class="code" href="classResuelveCGM.html">ResuelveCGM</a>(x,b,ep,iter)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;   {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <a class="code" href="classResuelveSistemaLineal.html#a9e5ba9744476c6c83792398ea42cfe23">M</a> = <a class="code" href="classBCGM.html#afa1e495830375b8bde2a973db6bcefba">A</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <a class="code" href="classResuelveCGM.html#a16f2143be32e4f9d25986d2e3de2b01c">C</a> = <a class="code" href="classResuelveSistemaLineal.html#a6e75d2b40f3b71f8414ea41e8cac3c86">B</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <a class="code" href="classResuelveSistemaLineal.html#a5d31ebb546fa47c46c5cc95b7faf36fb">RequiereMatriz</a> = <a class="code" href="ResuelveSistemaLineal_8hpp.html#aa08e0e41b07759cffc6983b9bca0f119">REQUIERE_MAT_BAND</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;   }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classResuelveCGMPrecondicionadoBandDisp.html#a27883f7d920e4699e67fee256e6aa8f8">resuelve</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classResuelveCGMPrecondicionadoBandDisp.html#adedd5ed12ec562a15273b91212edb6bc">  104</a></span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classResuelveCGMPrecondicionadoBandDisp.html#adedd5ed12ec562a15273b91212edb6bc">resuelve</a>(<a class="code" href="classVector.html">Vector</a> *x, <a class="code" href="classVector.html">Vector</a> *b)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;   {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <a class="code" href="classResuelveSistemaLineal.html#a28f4adc8f0b91d577ea14199dab4cc8b">X</a> = x;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <a class="code" href="classResuelveSistemaLineal.html#a6e75d2b40f3b71f8414ea41e8cac3c86">B</a> = b;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <a class="code" href="classResuelveCGMPrecondicionadoBandDisp.html#a27883f7d920e4699e67fee256e6aa8f8">resuelve</a>();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;   }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classMatrizBandDisp_html"><div class="ttname"><a href="classMatrizBandDisp.html">MatrizBandDisp</a></div><div class="ttdoc">Clase base para trabajar con matrices bandadas y dispersas. </div><div class="ttdef"><b>Definition:</b> MatrizBandDisp.hpp:44</div></div>
+<div class="ttc" id="classResuelveCGMPrecondicionadoBandDisp_html_ab44715947f54b2c9c0ae44a7ce754178"><div class="ttname"><a href="classResuelveCGMPrecondicionadoBandDisp.html#ab44715947f54b2c9c0ae44a7ce754178">ResuelveCGMPrecondicionadoBandDisp::ResuelveCGMPrecondicionadoBandDisp</a></div><div class="ttdeci">ResuelveCGMPrecondicionadoBandDisp(void)</div><div class="ttdoc">Constructor de la clase. </div><div class="ttdef"><b>Definition:</b> ResuelveCGMPrecondicionadoBandDisp.hpp:54</div></div>
+<div class="ttc" id="classVector_html"><div class="ttname"><a href="classVector.html">Vector</a></div><div class="ttdoc">Clase para el trabajar con vectores de punto flotante. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:47</div></div>
+<div class="ttc" id="classMatriz_html"><div class="ttname"><a href="classMatriz.html">Matriz</a></div><div class="ttdoc">Clase base para el trabajar con matrices de punto flotante. </div><div class="ttdef"><b>Definition:</b> Matriz.hpp:44</div></div>
+<div class="ttc" id="classResuelveCGM_html_a16f2143be32e4f9d25986d2e3de2b01c"><div class="ttname"><a href="classResuelveCGM.html#a16f2143be32e4f9d25986d2e3de2b01c">ResuelveCGM::C</a></div><div class="ttdeci">Matriz * C</div><div class="ttdoc">Precondicionador. </div><div class="ttdef"><b>Definition:</b> ResuelveCGM.hpp:67</div></div>
+<div class="ttc" id="classMatrizBand_html"><div class="ttname"><a href="classMatrizBand.html">MatrizBand</a></div><div class="ttdef"><b>Definition:</b> MatrizBand.hpp:47</div></div>
+<div class="ttc" id="classResuelveCGMPrecondicionadoBandDisp_html"><div class="ttname"><a href="classResuelveCGMPrecondicionadoBandDisp.html">ResuelveCGMPrecondicionadoBandDisp</a></div><div class="ttdoc">Clase para resolución del sistema lineal mediante CGM. </div><div class="ttdef"><b>Definition:</b> ResuelveCGMPrecondicionadoBandDisp.hpp:47</div></div>
+<div class="ttc" id="MatrizBandDisp_8hpp_html"><div class="ttname"><a href="MatrizBandDisp_8hpp.html">MatrizBandDisp.hpp</a></div></div>
+<div class="ttc" id="classResuelveSistemaLineal_html_a6e75d2b40f3b71f8414ea41e8cac3c86"><div class="ttname"><a href="classResuelveSistemaLineal.html#a6e75d2b40f3b71f8414ea41e8cac3c86">ResuelveSistemaLineal::B</a></div><div class="ttdeci">Vector * B</div><div class="ttdoc">Vactor lado derecho. </div><div class="ttdef"><b>Definition:</b> ResuelveSistemaLineal.hpp:82</div></div>
+<div class="ttc" id="ResuelveCGM_8hpp_html"><div class="ttname"><a href="ResuelveCGM_8hpp.html">ResuelveCGM.hpp</a></div></div>
+<div class="ttc" id="ResuelveSistemaLineal_8hpp_html_aa08e0e41b07759cffc6983b9bca0f119"><div class="ttname"><a href="ResuelveSistemaLineal_8hpp.html#aa08e0e41b07759cffc6983b9bca0f119">REQUIERE_MAT_BAND</a></div><div class="ttdeci">#define REQUIERE_MAT_BAND</div><div class="ttdef"><b>Definition:</b> ResuelveSistemaLineal.hpp:55</div></div>
+<div class="ttc" id="classResuelveCGMPrecondicionadoBandDisp_html_a573a9780835260afc008e2e426538652"><div class="ttname"><a href="classResuelveCGMPrecondicionadoBandDisp.html#a573a9780835260afc008e2e426538652">ResuelveCGMPrecondicionadoBandDisp::ResuelveCGMPrecondicionadoBandDisp</a></div><div class="ttdeci">ResuelveCGMPrecondicionadoBandDisp(MatrizBandDisp *A, Matriz *B, Vector *x, Vector *b)</div><div class="ttdoc">Constructor de la clase. </div><div class="ttdef"><b>Definition:</b> ResuelveCGMPrecondicionadoBandDisp.hpp:76</div></div>
+<div class="ttc" id="classBCGM_html_afa1e495830375b8bde2a973db6bcefba"><div class="ttname"><a href="classBCGM.html#afa1e495830375b8bde2a973db6bcefba">BCGM::A</a></div><div class="ttdeci">MultOp * A</div><div class="ttdef"><b>Definition:</b> BCGM.hpp:52</div></div>
+<div class="ttc" id="classResuelveSistemaLineal_html_a5d31ebb546fa47c46c5cc95b7faf36fb"><div class="ttname"><a href="classResuelveSistemaLineal.html#a5d31ebb546fa47c46c5cc95b7faf36fb">ResuelveSistemaLineal::RequiereMatriz</a></div><div class="ttdeci">int RequiereMatriz</div><div class="ttdoc">Requiere matriz del tipo Bandada, Dispersa, Densa. </div><div class="ttdef"><b>Definition:</b> ResuelveSistemaLineal.hpp:77</div></div>
+<div class="ttc" id="classResuelveCGMPrecondicionadoBandDisp_html_a4fc1677ee72b056326ace67e78dd553c"><div class="ttname"><a href="classResuelveCGMPrecondicionadoBandDisp.html#a4fc1677ee72b056326ace67e78dd553c">ResuelveCGMPrecondicionadoBandDisp::ResuelveCGMPrecondicionadoBandDisp</a></div><div class="ttdeci">ResuelveCGMPrecondicionadoBandDisp(MatrizBandDisp *A, Matriz *B)</div><div class="ttdoc">Constructor de la clase. </div><div class="ttdef"><b>Definition:</b> ResuelveCGMPrecondicionadoBandDisp.hpp:64</div></div>
+<div class="ttc" id="classResuelveSistemaLineal_html_a9e5ba9744476c6c83792398ea42cfe23"><div class="ttname"><a href="classResuelveSistemaLineal.html#a9e5ba9744476c6c83792398ea42cfe23">ResuelveSistemaLineal::M</a></div><div class="ttdeci">Matriz * M</div><div class="ttdoc">Matriz. </div><div class="ttdef"><b>Definition:</b> ResuelveSistemaLineal.hpp:84</div></div>
+<div class="ttc" id="classResuelveCGMPrecondicionadoBandDisp_html_ae081a968cbfd45d0d61e006882aa9c0d"><div class="ttname"><a href="classResuelveCGMPrecondicionadoBandDisp.html#ae081a968cbfd45d0d61e006882aa9c0d">ResuelveCGMPrecondicionadoBandDisp::ResuelveCGMPrecondicionadoBandDisp</a></div><div class="ttdeci">ResuelveCGMPrecondicionadoBandDisp(MatrizBand *A, Matriz *B, Vector *x, Vector *b, ldouble ep, int iter)</div><div class="ttdoc">Constructor de la clase. </div><div class="ttdef"><b>Definition:</b> ResuelveCGMPrecondicionadoBandDisp.hpp:90</div></div>
+<div class="ttc" id="classResuelveCGM_html"><div class="ttname"><a href="classResuelveCGM.html">ResuelveCGM</a></div><div class="ttdoc">Clase para resolución del sistema lineal mediante CGM standard. </div><div class="ttdef"><b>Definition:</b> ResuelveCGM.hpp:42</div></div>
+<div class="ttc" id="classResuelveSistemaLineal_html_a28f4adc8f0b91d577ea14199dab4cc8b"><div class="ttname"><a href="classResuelveSistemaLineal.html#a28f4adc8f0b91d577ea14199dab4cc8b">ResuelveSistemaLineal::X</a></div><div class="ttdeci">Vector * X</div><div class="ttdoc">Vector solución </div><div class="ttdef"><b>Definition:</b> ResuelveSistemaLineal.hpp:80</div></div>
+<div class="ttc" id="classResuelveCGMPrecondicionadoBandDisp_html_a27883f7d920e4699e67fee256e6aa8f8"><div class="ttname"><a href="classResuelveCGMPrecondicionadoBandDisp.html#a27883f7d920e4699e67fee256e6aa8f8">ResuelveCGMPrecondicionadoBandDisp::resuelve</a></div><div class="ttdeci">void resuelve(void)</div><div class="ttdoc">Resuelve el sistema lineal. </div><div class="ttdef"><b>Definition:</b> ResuelveCGMPrecondicionadoBandDisp.cpp:37</div></div>
+<div class="ttc" id="classResuelveCGMPrecondicionadoBandDisp_html_adedd5ed12ec562a15273b91212edb6bc"><div class="ttname"><a href="classResuelveCGMPrecondicionadoBandDisp.html#adedd5ed12ec562a15273b91212edb6bc">ResuelveCGMPrecondicionadoBandDisp::resuelve</a></div><div class="ttdeci">void resuelve(Vector *x, Vector *b)</div><div class="ttdoc">Resuelve el sistema lineal. </div><div class="ttdef"><b>Definition:</b> ResuelveCGMPrecondicionadoBandDisp.hpp:104</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el SÃ¡bado, 20 de Febrero de 2016 08:58:17 por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

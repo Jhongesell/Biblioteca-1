@@ -1,0 +1,103 @@
+
+Particiona el dominio
+
+Dominio: (0.000000,0.000000) a (1.000000,1.000000)
+
+
+Nodos de los elementos
+
+Elemento   1 ---> Nodos (   0,  1,  3 )
+Elemento   2 ---> Nodos (   1,  4,  3 )
+Elemento   3 ---> Nodos (   1,  2,  4 )
+Elemento   4 ---> Nodos (   2,  5,  4 )
+Elemento   5 ---> Nodos (   3,  4,  6 )
+Elemento   6 ---> Nodos (   4,  7,  6 )
+Elemento   7 ---> Nodos (   4,  5,  7 )
+Elemento   8 ---> Nodos (   5,  8,  7 )
+
+Nodos
+
+Nodo:   0 (   0 ) ---> Nodo: ( +0.0000000000e+00 ,  +0.0000000000e+00  )
+Nodo:   1 (   0 ) ---> Nodo: ( +5.0000000000e-01 ,  +0.0000000000e+00  )
+Nodo:   2 (   0 ) ---> Nodo: ( +1.0000000000e+00 ,  +0.0000000000e+00  )
+Nodo:   3 (   0 ) ---> Nodo: ( +0.0000000000e+00 ,  +5.0000000000e-01  )
+Nodo:   4 (   0 ) ---> Nodo: ( +5.0000000000e-01 ,  +5.0000000000e-01  )
+Nodo:   5 (   0 ) ---> Nodo: ( +1.0000000000e+00 ,  +5.0000000000e-01  )
+Nodo:   6 (   0 ) ---> Nodo: ( +0.0000000000e+00 ,  +1.0000000000e+00  )
+Nodo:   7 (   0 ) ---> Nodo: ( +5.0000000000e-01 ,  +1.0000000000e+00  )
+Nodo:   8 (   0 ) ---> Nodo: ( +1.0000000000e+00 ,  +1.0000000000e+00  )
+
+
+Dominio: (0.000000,0.000000) a (0.000000,0.000000)
+
+
+Nodos de los elementos
+
+Elemento   1 ---> Nodos (   0,  1,  3 )
+Elemento   2 ---> Nodos (   1,  4,  3 )
+Elemento   3 ---> Nodos (   1,  2,  4 )
+Elemento   4 ---> Nodos (   2,  5,  4 )
+Elemento   5 ---> Nodos (   3,  4,  6 )
+Elemento   6 ---> Nodos (   4,  7,  6 )
+Elemento   7 ---> Nodos (   4,  5,  7 )
+Elemento   8 ---> Nodos (   5,  8,  7 )
+
+Nodos
+
+Nodo:   0 (   0 ) ---> Nodo: ( +0.0000000000e+00 ,  +0.0000000000e+00  )
+Nodo:   1 (   0 ) ---> Nodo: ( +5.0000000000e-01 ,  +0.0000000000e+00  )
+Nodo:   2 (   0 ) ---> Nodo: ( +1.0000000000e+00 ,  +0.0000000000e+00  )
+Nodo:   3 (   0 ) ---> Nodo: ( +0.0000000000e+00 ,  +5.0000000000e-01  )
+Nodo:   4 (   0 ) ---> Nodo: ( +5.0000000000e-01 ,  +5.0000000000e-01  )
+Nodo:   5 (   0 ) ---> Nodo: ( +1.0000000000e+00 ,  +5.0000000000e-01  )
+Nodo:   6 (   0 ) ---> Nodo: ( +0.0000000000e+00 ,  +1.0000000000e+00  )
+Nodo:   7 (   0 ) ---> Nodo: ( +5.0000000000e-01 ,  +1.0000000000e+00  )
+Nodo:   8 (   0 ) ---> Nodo: ( +1.0000000000e+00 ,  +1.0000000000e+00  )
+
+
+Visualiza los nodos que la primera coordenada sea 0.0
+
+
+Nodos de los elementos
+
+Elemento   1 ---> Nodos (   0,  1,  3 )
+Elemento   2 ---> Nodos (   1,  4,  3 )
+Elemento   3 ---> Nodos (   1,  2,  4 )
+Elemento   4 ---> Nodos (   2,  5,  4 )
+Elemento   5 ---> Nodos (   3,  4,  6 )
+Elemento   6 ---> Nodos (   4,  7,  6 )
+Elemento   7 ---> Nodos (   4,  5,  7 )
+Elemento   8 ---> Nodos (   5,  8,  7 )
+
+Nodos
+
+Nodo:   0 (  -1 ) ---> Nodo: ( +0.0000000000e+00 ,  +0.0000000000e+00  )
+Nodo:   1 (   0 ) ---> Nodo: ( +5.0000000000e-01 ,  +0.0000000000e+00  )
+Nodo:   2 (   1 ) ---> Nodo: ( +1.0000000000e+00 ,  +0.0000000000e+00  )
+Nodo:   3 (  -1 ) ---> Nodo: ( +0.0000000000e+00 ,  +5.0000000000e-01  )
+Nodo:   4 (   2 ) ---> Nodo: ( +5.0000000000e-01 ,  +5.0000000000e-01  )
+Nodo:   5 (   3 ) ---> Nodo: ( +1.0000000000e+00 ,  +5.0000000000e-01  )
+Nodo:   6 (  -1 ) ---> Nodo: ( +0.0000000000e+00 ,  +1.0000000000e+00  )
+Nodo:   7 (   4 ) ---> Nodo: ( +5.0000000000e-01 ,  +1.0000000000e+00  )
+Nodo:   8 (   5 ) ---> Nodo: ( +1.0000000000e+00 ,  +1.0000000000e+00  )
+
+
+Visualiza los nodos marcados
+Nodo: 0
+Nodo: 3
+Nodo: 6
+
+Matriz Densa Entera "Soporte de cada nodo" de dimensión: 9 x 6
+Número de entradas distintas de cero: 54
+Numero máximo de columnas ocupadas: 6
+
+ +1  -1  -1  -1  -1  -1 
+ +1  +2  +3  -1  -1  -1 
+ +3  +4  -1  -1  -1  -1 
+ +1  +2  +5  -1  -1  -1 
+ +2  +3  +4  +5  +6  +7 
+ +4  +7  +8  -1  -1  -1 
+ +5  +6  -1  -1  -1  -1 
+ +6  +7  +8  -1  -1  -1 
+ +8  -1  -1  -1  -1  -1 
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>EjemploCtrlParametros.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.8 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">EjemploCtrlParametros.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>Esta clase implementa los componentes para leer parametros de la linea de comandos</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="CtrlParametros_8hpp.html">CtrlParametros.hpp</a>&quot;</span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span> *args[]) </div>
+<div class="line">{</div>
+<div class="line">   </div>
+<div class="line">   <a name="_a0"></a><a class="code" href="classCtrlParametros.html">CtrlParametros</a> parm(argc, args);</div>
+<div class="line">   parm.<a name="a1"></a><a class="code" href="classCtrlParametros.html#a33c58f6ad6a041045838254578eb9ace">visualiza</a>();</div>
+<div class="line">   </div>
+<div class="line">   <span class="keywordtype">int</span> i;</div>
+<div class="line">   ldouble d;</div>
+<div class="line">   i = parm.<a name="a2"></a><a class="code" href="classCtrlParametros.html#a4a78b7c0afc21afd5a469599fcbab1bb">intVal</a>(<span class="stringliteral">&quot;m&quot;</span>,3);</div>
+<div class="line">   d = parm.<a name="a3"></a><a class="code" href="classCtrlParametros.html#a569332524df5f9dd553b1fe92ad00927">doubleVal</a>(<span class="stringliteral">&quot;r&quot;</span>,3.09);</div>
+<div class="line">   printf(<span class="stringliteral">&quot;\n int %d double %f&quot;</span>,i,d);</div>
+<div class="line"></div>
+<div class="line">   printf(<span class="stringliteral">&quot;\n Busca f encontro = %d&quot;</span>,parm.<a name="a4"></a><a class="code" href="classCtrlParametros.html#a7453c6d63f9787c7822efd7fff4f4ab9">busca</a>(<span class="stringliteral">&quot;f&quot;</span>));</div>
+<div class="line"></div>
+<div class="line">   </div>
+<div class="line">   i = parm.<a class="code" href="classCtrlParametros.html#a4a78b7c0afc21afd5a469599fcbab1bb">intVal</a>(<span class="stringliteral">&quot;n&quot;</span>);</div>
+<div class="line">   d = parm.<a class="code" href="classCtrlParametros.html#a569332524df5f9dd553b1fe92ad00927">doubleVal</a>(<span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line">   printf(<span class="stringliteral">&quot;\n int %d double %f\n&quot;</span>,i,d);</div>
+<div class="line">   </div>
+<div class="line">   <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Sábado, 20 de Febrero de 2016 08:56:07 por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

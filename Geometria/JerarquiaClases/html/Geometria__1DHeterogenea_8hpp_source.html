@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Fichero Fuente Geometria_1DHeterogenea.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.8 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>PÃ¡gina&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>PÃ¡ginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Geometria_1DHeterogenea.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Geometria__1DHeterogenea_8hpp.html">Ir a la documentaciÃ³n de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Clase para generar una geometría heterogénea en una dimensión                            //</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Análisis y Diseño y Programación:                                                        //</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Nombre:   Antonio Carrillo Ledesma                                                       //</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// E-mail:   acl@www.mmc.geofisica.unam.mx                                                  //</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// Página:   http://www.mmc.geofisica.unam.mx/acl                                           //</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// Este programa es software libre. Puede redistribuirlo y/o modificarlo                    //</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// bajo los términos de la Licencia Pública General de GNU según es                         //</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// publicada por la Free Software Foundation, bien de la versión 2 de                       //</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// dicha Licencia o bien (según su elección) de cualquier versión                           //</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// posterior.                                                                               //</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Este programa se distribuye con la esperanza de que sea útil, pero SIN                   //</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// NINGUNA GARANTÍA, incluso sin la garantía MERCANTIL implícita o sin                      //</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// garantizar la CONVENIENCIA PARA UN PROPÓSITO PARTICULAR. Véase la                        //</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// Licencia Pública General de GNU para más detalles.                                       //</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// Debería haber recibido una copia de la Licencia Pública General junto                    //</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// con este programa. Si no ha sido así, escriba a la Free Software                         //</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// Foundation, Inc., en 675 Mass Ave, Cambridge, MA 02139, EEUU.                            //</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//                                                                                          //</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifndef __Geometria_1DHeterogenea__</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define __Geometria_1DHeterogenea__</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Geometria__1D_8hpp.html">Geometria_1D.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="Geometria__1DHeterogenea_8hpp.html#ad9ef6961fb41b000be06f50ff545f55d">   38</a></span>&#160;<span class="preprocessor">#define IZQUIERDA  -1</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="Geometria__1DHeterogenea_8hpp.html#a81fb3cc8d71106a3bc624c668541e548">   39</a></span>&#160;<span class="preprocessor">#define CENTRADA    0</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="Geometria__1DHeterogenea_8hpp.html#aabf9c516001d8e5c7c9e593e5a25d249">   40</a></span>&#160;<span class="preprocessor">#define DERECHA     1</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="Geometria__1DHeterogenea_8hpp.html#aabcf5a6049416e96e3d1a0af5a6cb214">   44</a></span>&#160;<span class="preprocessor">#define DOMINIO_NM     1   // Dominio/(n^m) </span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="Geometria__1DHeterogenea_8hpp.html#a3bc7b82cee7ea05852893230e837477e">   45</a></span>&#160;<span class="preprocessor">#define DOMINIO_LOGe   2   // Dominio/Loge</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="Geometria__1DHeterogenea_8hpp.html#a2abe1daff2033d68f21927e510405231">   46</a></span>&#160;<span class="preprocessor">#define DIMINIO_LOG10  3   // Dominio/Log10</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classGeometria__1DHeterogenea.html">   57</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGeometria__1DHeterogenea.html">Geometria_1DHeterogenea</a> : <span class="keyword">public</span> <a class="code" href="classGeometria__1D.html">Geometria_1D</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   <span class="keywordtype">int</span> Tipo;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   <span class="keywordtype">int</span> Centrada;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   <span class="keywordtype">int</span> M;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   <span class="keywordtype">void</span> dominioNM(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   <span class="keywordtype">void</span> dominioLOGe(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   <span class="keywordtype">void</span> dominioLOG10(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classGeometria__1DHeterogenea.html#a60914cc8476b52511a2d541fbb6735e1">   85</a></span>&#160;   <a class="code" href="classGeometria__1DHeterogenea.html#a60914cc8476b52511a2d541fbb6735e1">Geometria_1DHeterogenea</a>(ldouble xi, ldouble xf, <span class="keywordtype">int</span> part, <span class="keywordtype">int</span> tp, <span class="keywordtype">double</span> cen=0.0) : <a class="code" href="classGeometria__1D.html">Geometria_1D</a>()</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;   {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <a class="code" href="classGeometria.html#a30e01e755e0b8e334738085b713c1c48">Dominio</a>.<a class="code" href="classMatrizDensa.html#ad51039934b942d2b373843ee54c43c4d">asigna</a>(0,0,xi);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <a class="code" href="classGeometria.html#a30e01e755e0b8e334738085b713c1c48">Dominio</a>.<a class="code" href="classMatrizDensa.html#ad51039934b942d2b373843ee54c43c4d">asigna</a>(1,0,xf);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <a class="code" href="classGeometria.html#a24bef8fceaa12fa23d425297ad5903cb">Particion</a>.<a class="code" href="classVectorInt.html#a2a0786288f76c32a45c259e688170fd1">asigna</a>(0,part);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <a class="code" href="classGeometria.html#a7d0e9483a45427d82a2647ac7672bef6">N_N</a> = part;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <a class="code" href="classGeometria.html#a6caa1abacb62b4b54c9e5cf8f2511e48">N_E</a> = part - 1;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      Tipo = tp;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      Centrada = cen;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      M = 2;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <a class="code" href="classGeometria__1DHeterogenea.html#a91c840d119e2bc57d0e021cf5f2b8937">generaGeometria</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;   }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classGeometria__1DHeterogenea.html#aa610c818e889624c223580c2bea29853">  107</a></span>&#160;   <a class="code" href="classGeometria__1DHeterogenea.html#aa610c818e889624c223580c2bea29853">Geometria_1DHeterogenea</a>(<a class="code" href="classMatrizDensa.html">MatrizDensa</a> *dom, <span class="keywordtype">int</span> part, <span class="keywordtype">int</span> tp, <span class="keywordtype">double</span> cen=0.0) : <a class="code" href="classGeometria__1D.html">Geometria_1D</a>()</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;   {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      dom-&gt;<a class="code" href="classMatriz.html#a03d02833fd66884fad495264948fceb0">copia</a>(&amp;<a class="code" href="classGeometria.html#a30e01e755e0b8e334738085b713c1c48">Dominio</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <a class="code" href="classGeometria.html#a24bef8fceaa12fa23d425297ad5903cb">Particion</a>.<a class="code" href="classVectorInt.html#a2a0786288f76c32a45c259e688170fd1">asigna</a>(0,part);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <a class="code" href="classGeometria.html#a7d0e9483a45427d82a2647ac7672bef6">N_N</a> = part;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <a class="code" href="classGeometria.html#a6caa1abacb62b4b54c9e5cf8f2511e48">N_E</a> = part - 1;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      Tipo = tp;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      Centrada = cen;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <a class="code" href="classGeometria__1DHeterogenea.html#a91c840d119e2bc57d0e021cf5f2b8937">generaGeometria</a>();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;   }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classGeometria__1DHeterogenea.html#a7a1dba9aa715254c96bf4a0588123973">  125</a></span>&#160;   <a class="code" href="classGeometria__1DHeterogenea.html#a7a1dba9aa715254c96bf4a0588123973">Geometria_1DHeterogenea</a>(<span class="keywordtype">char</span> *arch) : <a class="code" href="classGeometria__1D.html">Geometria_1D</a>()</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;   {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <a class="code" href="classGeometria.html#ab3ede0bcaebb2f9bf8f0d6883e35a94f">leeGeometria</a>(arch);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;   }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classGeometria__1DHeterogenea.html#a91c840d119e2bc57d0e021cf5f2b8937">generaGeometria</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;};</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classGeometria__1D_html"><div class="ttname"><a href="classGeometria__1D.html">Geometria_1D</a></div><div class="ttdoc">Clase para generar una geometría en una dimensión </div><div class="ttdef"><b>Definition:</b> Geometria_1D.hpp:43</div></div>
+<div class="ttc" id="classGeometria__1DHeterogenea_html_a7a1dba9aa715254c96bf4a0588123973"><div class="ttname"><a href="classGeometria__1DHeterogenea.html#a7a1dba9aa715254c96bf4a0588123973">Geometria_1DHeterogenea::Geometria_1DHeterogenea</a></div><div class="ttdeci">Geometria_1DHeterogenea(char *arch)</div><div class="ttdoc">Constructor de la clase. </div><div class="ttdef"><b>Definition:</b> Geometria_1DHeterogenea.hpp:125</div></div>
+<div class="ttc" id="classGeometria_html_a30e01e755e0b8e334738085b713c1c48"><div class="ttname"><a href="classGeometria.html#a30e01e755e0b8e334738085b713c1c48">Geometria::Dominio</a></div><div class="ttdeci">MatrizDensa Dominio</div><div class="ttdoc">Dominio de la geometria. </div><div class="ttdef"><b>Definition:</b> Geometria.hpp:65</div></div>
+<div class="ttc" id="classGeometria__1DHeterogenea_html_a91c840d119e2bc57d0e021cf5f2b8937"><div class="ttname"><a href="classGeometria__1DHeterogenea.html#a91c840d119e2bc57d0e021cf5f2b8937">Geometria_1DHeterogenea::generaGeometria</a></div><div class="ttdeci">void generaGeometria(void)</div><div class="ttdoc">Genera la geometria. </div><div class="ttdef"><b>Definition:</b> Geometria_1DHeterogenea.cpp:35</div></div>
+<div class="ttc" id="classGeometria__1DHeterogenea_html_a60914cc8476b52511a2d541fbb6735e1"><div class="ttname"><a href="classGeometria__1DHeterogenea.html#a60914cc8476b52511a2d541fbb6735e1">Geometria_1DHeterogenea::Geometria_1DHeterogenea</a></div><div class="ttdeci">Geometria_1DHeterogenea(ldouble xi, ldouble xf, int part, int tp, double cen=0.0)</div><div class="ttdef"><b>Definition:</b> Geometria_1DHeterogenea.hpp:85</div></div>
+<div class="ttc" id="classMatriz_html_a03d02833fd66884fad495264948fceb0"><div class="ttname"><a href="classMatriz.html#a03d02833fd66884fad495264948fceb0">Matriz::copia</a></div><div class="ttdeci">virtual void copia(Matriz *a)</div><div class="ttdoc">Copia el contenido de la matriz a la matriz pasada como parámetro. </div><div class="ttdef"><b>Definition:</b> Matriz.cpp:371</div></div>
+<div class="ttc" id="classMatrizDensa_html"><div class="ttname"><a href="classMatrizDensa.html">MatrizDensa</a></div><div class="ttdoc">Clase para el trabajar con matrices densas de punto flotante. </div><div class="ttdef"><b>Definition:</b> MatrizDensa.hpp:44</div></div>
+<div class="ttc" id="classVectorInt_html_a2a0786288f76c32a45c259e688170fd1"><div class="ttname"><a href="classVectorInt.html#a2a0786288f76c32a45c259e688170fd1">VectorInt::asigna</a></div><div class="ttdeci">void asigna(const int col, const int val)</div><div class="ttdoc">Asigna el valor val a la columna col. </div><div class="ttdef"><b>Definition:</b> VectorInt.hpp:202</div></div>
+<div class="ttc" id="classGeometria__1DHeterogenea_html"><div class="ttname"><a href="classGeometria__1DHeterogenea.html">Geometria_1DHeterogenea</a></div><div class="ttdoc">Clase para generar una geometría heterogénea en una dimensión </div><div class="ttdef"><b>Definition:</b> Geometria_1DHeterogenea.hpp:57</div></div>
+<div class="ttc" id="classMatrizDensa_html_ad51039934b942d2b373843ee54c43c4d"><div class="ttname"><a href="classMatrizDensa.html#ad51039934b942d2b373843ee54c43c4d">MatrizDensa::asigna</a></div><div class="ttdeci">void asigna(const int ren, const int col, const ldouble val)</div><div class="ttdoc">Asigna el valor indicado en el renglo y columna solicitado. </div><div class="ttdef"><b>Definition:</b> MatrizDensa.hpp:147</div></div>
+<div class="ttc" id="classGeometria_html_a7d0e9483a45427d82a2647ac7672bef6"><div class="ttname"><a href="classGeometria.html#a7d0e9483a45427d82a2647ac7672bef6">Geometria::N_N</a></div><div class="ttdeci">int N_N</div><div class="ttdoc">Numero de nodos. </div><div class="ttdef"><b>Definition:</b> Geometria.hpp:85</div></div>
+<div class="ttc" id="classGeometria_html_ab3ede0bcaebb2f9bf8f0d6883e35a94f"><div class="ttname"><a href="classGeometria.html#ab3ede0bcaebb2f9bf8f0d6883e35a94f">Geometria::leeGeometria</a></div><div class="ttdeci">void leeGeometria(const char *arch)</div><div class="ttdoc">Lee la geometria a un archivo. </div><div class="ttdef"><b>Definition:</b> Geometria.hpp:386</div></div>
+<div class="ttc" id="Geometria__1D_8hpp_html"><div class="ttname"><a href="Geometria__1D_8hpp.html">Geometria_1D.hpp</a></div></div>
+<div class="ttc" id="classGeometria__1DHeterogenea_html_aa610c818e889624c223580c2bea29853"><div class="ttname"><a href="classGeometria__1DHeterogenea.html#aa610c818e889624c223580c2bea29853">Geometria_1DHeterogenea::Geometria_1DHeterogenea</a></div><div class="ttdeci">Geometria_1DHeterogenea(MatrizDensa *dom, int part, int tp, double cen=0.0)</div><div class="ttdoc">Constructor de la clase. </div><div class="ttdef"><b>Definition:</b> Geometria_1DHeterogenea.hpp:107</div></div>
+<div class="ttc" id="classGeometria_html_a24bef8fceaa12fa23d425297ad5903cb"><div class="ttname"><a href="classGeometria.html#a24bef8fceaa12fa23d425297ad5903cb">Geometria::Particion</a></div><div class="ttdeci">VectorInt Particion</div><div class="ttdoc">Particion del dominio. </div><div class="ttdef"><b>Definition:</b> Geometria.hpp:68</div></div>
+<div class="ttc" id="classGeometria_html_a6caa1abacb62b4b54c9e5cf8f2511e48"><div class="ttname"><a href="classGeometria.html#a6caa1abacb62b4b54c9e5cf8f2511e48">Geometria::N_E</a></div><div class="ttdeci">int N_E</div><div class="ttdoc">Numero de elementos. </div><div class="ttdef"><b>Definition:</b> Geometria.hpp:88</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el SÃ¡bado, 20 de Febrero de 2016 08:55:03 por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

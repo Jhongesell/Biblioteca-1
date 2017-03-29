@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>EjemploGeometria1D.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.8 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>PÃ¡gina&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>PÃ¡ginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">EjemploGeometria1D.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>Esta clase implementa los componentes para el trabajar con una geometría heterogénea en una dimensión</p>
+<div class="fragment"><div class="line"><span class="comment">// Programa para generar una geometria en una dimensión                                     //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Análisis y Diseño y Programación:                                                        //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Nombre:   Antonio Carrillo Ledesma                                                       //</span></div>
+<div class="line"><span class="comment">// E-mail:   acl@www.mmc.igeofcu.unam.mx                                                    //</span></div>
+<div class="line"><span class="comment">// Página:   http://www.mmc.igeofcu.unam.mx/acl                                             //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Este programa es software libre. Puede redistribuirlo y/o modificarlo                    //</span></div>
+<div class="line"><span class="comment">// bajo los términos de la Licencia Pública General de GNU según es                         //</span></div>
+<div class="line"><span class="comment">// publicada por la Free Software Foundation, bien de la versión 2 de                       //</span></div>
+<div class="line"><span class="comment">// dicha Licencia o bien (según su elección) de cualquier versión                           //</span></div>
+<div class="line"><span class="comment">// posterior.                                                                               //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Este programa se distribuye con la esperanza de que sea útil, pero SIN                   //</span></div>
+<div class="line"><span class="comment">// NINGUNA GARANTÍA, incluso sin la garantía MERCANTIL implícita o sin                      //</span></div>
+<div class="line"><span class="comment">// garantizar la CONVENIENCIA PARA UN PROPÓSITO PARTICULAR. Véase la                        //</span></div>
+<div class="line"><span class="comment">// Licencia Pública General de GNU para más detalles.                                       //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Debería haber recibido una copia de la Licencia Pública General junto                    //</span></div>
+<div class="line"><span class="comment">// con este programa. Si no ha sido así, escriba a la Free Software                         //</span></div>
+<div class="line"><span class="comment">// Foundation, Inc., en 675 Mass Ave, Cambridge, MA 02139, EEUU.                            //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment"></span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="Geometria__1DHomogenea_8hpp.html">Geometria_1DHomogenea.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="Geometria__1DLeerArchivo_8hpp.html">Geometria_1DLeerArchivo.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="Geometria__1DHeterogenea_8hpp.html">Geometria_1DHeterogenea.hpp</a>&quot;</span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"> <span class="comment">// Funcion Principal ....</span></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">// Primer ejemplo</span></div>
+<div class="line">   printf(<span class="stringliteral">&quot;\nGenera partición del dominio\n&quot;</span>);</div>
+<div class="line">   <a name="_a0"></a><a class="code" href="classGeometria__1DHomogenea.html">Geometria_1DHomogenea</a> C(0.0,1.0,10);</div>
+<div class="line">   C.<a name="a1"></a><a class="code" href="classGeometria__1D.html#ac4bf51683c35160070dd7d0d931efde6">visualizaCoordenadasDominio</a>();</div>
+<div class="line">   C.<a name="a2"></a><a class="code" href="classGeometria.html#a516c953ccc8b9657296885ca60670a7f">visualizaElementos</a>();</div>
+<div class="line">   C.<a name="a3"></a><a class="code" href="classGeometria.html#a99ed70f7e4b207141e3954a1d7328da7">visualizaNodos</a>();</div>
+<div class="line">   printf(<span class="stringliteral">&quot;\nVisualiza los elementos que contienen al nodo 2\n\n&quot;</span>);</div>
+<div class="line">   C.<a name="a4"></a><a class="code" href="classGeometria.html#a75fcf3d1d8fe7fb8a6d2ef44bca884d3">visualizaElementosContienenNodo</a>(2);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Segundo ejemplo</span></div>
+<div class="line">   <a name="_a5"></a><a class="code" href="classGeometria__1D.html">Geometria_1D</a> *arr[2];</div>
+<div class="line">   <a name="_a6"></a><a class="code" href="classGeometria__1DHeterogenea.html">Geometria_1DHeterogenea</a> *A = <span class="keyword">new</span> <a class="code" href="classGeometria__1DHeterogenea.html">Geometria_1DHeterogenea</a>(0.0,2.0,10,<a name="a7"></a><a class="code" href="Geometria__1DHeterogenea_8hpp.html#aabcf5a6049416e96e3d1a0af5a6cb214">DOMINIO_NM</a>,<a name="a8"></a><a class="code" href="Geometria__1DHeterogenea_8hpp.html#ad9ef6961fb41b000be06f50ff545f55d">IZQUIERDA</a>);</div>
+<div class="line">   <a class="code" href="classGeometria__1DHeterogenea.html">Geometria_1DHeterogenea</a> *B = <span class="keyword">new</span> <a class="code" href="classGeometria__1DHeterogenea.html">Geometria_1DHeterogenea</a>(0.0,2.0,10,<a class="code" href="Geometria__1DHeterogenea_8hpp.html#aabcf5a6049416e96e3d1a0af5a6cb214">DOMINIO_NM</a>,<a name="a9"></a><a class="code" href="Geometria__1DHeterogenea_8hpp.html#aabf9c516001d8e5c7c9e593e5a25d249">DERECHA</a>);</div>
+<div class="line">   </div>
+<div class="line">   arr[0] = A;</div>
+<div class="line">   arr[1] = B;</div>
+<div class="line">   </div>
+<div class="line">   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
+<div class="line">   {</div>
+<div class="line">      arr[i]-&gt;<a class="code" href="classGeometria__1D.html#ac4bf51683c35160070dd7d0d931efde6">visualizaCoordenadasDominio</a>();</div>
+<div class="line">      arr[i]-&gt;<a class="code" href="classGeometria.html#a516c953ccc8b9657296885ca60670a7f">visualizaElementos</a>();</div>
+<div class="line">      arr[i]-&gt;<a class="code" href="classGeometria.html#a99ed70f7e4b207141e3954a1d7328da7">visualizaNodos</a>();</div>
+<div class="line">      printf(<span class="stringliteral">&quot;\nVisualiza los elementos que contienen al nodo 2\n\n&quot;</span>);</div>
+<div class="line">      arr[i]-&gt;<a class="code" href="classGeometria.html#a75fcf3d1d8fe7fb8a6d2ef44bca884d3">visualizaElementosContienenNodo</a>(2);</div>
+<div class="line">      arr[i]-&gt;<a name="a10"></a><a class="code" href="classGeometria.html#ad0d479d78086029fdb36562050e9ac6e">generaSoporteNodos</a>();</div>
+<div class="line">      arr[i]-&gt;<a name="a11"></a><a class="code" href="classGeometria.html#aba2f36b7f6390a2342879b5fbff00691">visualizaSoporteNodos</a>();</div>
+<div class="line">   }</div>
+<div class="line">   </div>
+<div class="line">   <span class="keyword">delete</span> A;</div>
+<div class="line">   <span class="keyword">delete</span> B;</div>
+<div class="line">   arr[0] = NULL;</div>
+<div class="line">   arr[1] = NULL;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el SÃ¡bado, 20 de Febrero de 2016 08:55:03 por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

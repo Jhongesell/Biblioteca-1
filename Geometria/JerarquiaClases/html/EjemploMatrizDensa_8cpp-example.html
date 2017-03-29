@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>EjemploMatrizDensa.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.8 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>PÃ¡gina&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>PÃ¡ginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">EjemploMatrizDensa.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>Esta clase implementa los componentes para el trabajar con matrices densas de punto flotante</p>
+<div class="fragment"><div class="line"><span class="comment">// Programa para usar la clase de matriz densa                                              //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Análisis y Diseño y Programación:                                                        //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Nombre:   Antonio Carrillo Ledesma                                                       //</span></div>
+<div class="line"><span class="comment">// E-mail:   acl@www.mmc.igeofcu.unam.mx                                                    //</span></div>
+<div class="line"><span class="comment">// Página:   http://www.mmc.igeofcu.unam.mx/acl                                             //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Este programa es software libre. Puede redistribuirlo y/o modificarlo                    //</span></div>
+<div class="line"><span class="comment">// bajo los términos de la Licencia Pública General de GNU según es                         //</span></div>
+<div class="line"><span class="comment">// publicada por la Free Software Foundation, bien de la versión 2 de                       //</span></div>
+<div class="line"><span class="comment">// dicha Licencia o bien (según su elección) de cualquier versión                           //</span></div>
+<div class="line"><span class="comment">// posterior.                                                                               //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Este programa se distribuye con la esperanza de que sea útil, pero SIN                   //</span></div>
+<div class="line"><span class="comment">// NINGUNA GARANTÍA, incluso sin la garantía MERCANTIL implícita o sin                      //</span></div>
+<div class="line"><span class="comment">// garantizar la CONVENIENCIA PARA UN PROPÓSITO PARTICULAR. Véase la                        //</span></div>
+<div class="line"><span class="comment">// Licencia Pública General de GNU para más detalles.                                       //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Debería haber recibido una copia de la Licencia Pública General junto                    //</span></div>
+<div class="line"><span class="comment">// con este programa. Si no ha sido así, escriba a la Free Software                         //</span></div>
+<div class="line"><span class="comment">// Foundation, Inc., en 675 Mass Ave, Cambridge, MA 02139, EEUU.                            //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment"></span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;Definiciones.hpp&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="MatrizDensa_8hpp.html">MatrizDensa.hpp</a>&quot;</span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">   <span class="keywordtype">int</span> i;</div>
+<div class="line"></div>
+<div class="line">   <span class="keyword">const</span> <span class="keywordtype">int</span> TAM = 5;</div>
+<div class="line">   ldouble A[][TAM] = {</div>
+<div class="line">     {0.2,0.1,1.0,1.0,0.0},</div>
+<div class="line">     {0.1,4.0,-1.0,1.0, -1.0},</div>
+<div class="line">     {1.0,-1.0,60.0,0.0,-2.0},</div>
+<div class="line">     {1.0,1.0,0.0,8.0,4.0},</div>
+<div class="line">     {0.0,-1.0,-2.0,4.0,700.0}</div>
+<div class="line">   }; </div>
+<div class="line"></div>
+<div class="line">   <a name="_a0"></a><a class="code" href="classMatrizDensa.html">MatrizDensa</a> b(100,100,<span class="stringliteral">&quot;B&quot;</span>);</div>
+<div class="line">   </div>
+<div class="line">   <a class="code" href="classMatrizDensa.html">MatrizDensa</a> *a = <span class="keyword">new</span> <a class="code" href="classMatrizDensa.html">MatrizDensa</a>(TAM,TAM,<span class="stringliteral">&quot;A&quot;</span>);</div>
+<div class="line">   <span class="keywordflow">for</span> (i = 0; i &lt; TAM; i++) a-&gt;<a name="a1"></a><a class="code" href="classMatriz.html#a74023f614956db73f719002e754ba36a">convierte</a>(A[i],i,TAM);</div>
+<div class="line">   a-&gt;<a name="a2"></a><a class="code" href="classMatriz.html#a34e872825b7cd2db567d853c54924807">visualiza</a>(0);</div>
+<div class="line">   </div>
+<div class="line">   b.<a name="a3"></a><a class="code" href="classMatrizDensa.html#afad0da936f6f9ddd9dea87f605590731">redimensiona</a>(TAM,TAM);</div>
+<div class="line">   a-&gt;<a name="a4"></a><a class="code" href="classMatriz.html#a03d02833fd66884fad495264948fceb0">copia</a>(&amp;b);</div>
+<div class="line">   b.<a class="code" href="classMatriz.html#a34e872825b7cd2db567d853c54924807">visualiza</a>(0);</div>
+<div class="line">   </div>
+<div class="line">   printf(<span class="stringliteral">&quot;\n%lf\n&quot;</span>,b(0,0));</div>
+<div class="line">   </div>
+<div class="line">   <a class="code" href="classMatrizDensa.html">MatrizDensa</a> c(b);</div>
+<div class="line">   c.<a class="code" href="classMatriz.html#a34e872825b7cd2db567d853c54924807">visualiza</a>(0);</div>
+<div class="line">   </div>
+<div class="line">   <span class="keyword">delete</span> a;</div>
+<div class="line"></div>
+<div class="line">   <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el SÃ¡bado, 20 de Febrero de 2016 08:55:03 por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

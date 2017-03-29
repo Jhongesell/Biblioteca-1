@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>EjemploVectorExtendido.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.8 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>PÃ¡gina&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>PÃ¡ginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">EjemploVectorExtendido.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>Esta clase implementa los comportamientos más comunes para el trabajar con vectores de punto foltante que extiende a un vector existente</p>
+<div class="fragment"><div class="line"><span class="comment">// Programa para usar la clase de matriz bandada                                            //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Análisis y Diseño y Programación:                                                        //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Nombre:   Antonio Carrillo Ledesma                                                       //</span></div>
+<div class="line"><span class="comment">// E-mail:   acl@www.mmc.igeofcu.unam.mx                                                    //</span></div>
+<div class="line"><span class="comment">// Página:   http://www.mmc.igeofcu.unam.mx/acl                                             //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Este programa es software libre. Puede redistribuirlo y/o modificarlo                    //</span></div>
+<div class="line"><span class="comment">// bajo los términos de la Licencia Pública General de GNU según es                         //</span></div>
+<div class="line"><span class="comment">// publicada por la Free Software Foundation, bien de la versión 2 de                       //</span></div>
+<div class="line"><span class="comment">// dicha Licencia o bien (según su elección) de cualquier versión                           //</span></div>
+<div class="line"><span class="comment">// posterior.                                                                               //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Este programa se distribuye con la esperanza de que sea útil, pero SIN                   //</span></div>
+<div class="line"><span class="comment">// NINGUNA GARANTÍA, incluso sin la garantía MERCANTIL implícita o sin                      //</span></div>
+<div class="line"><span class="comment">// garantizar la CONVENIENCIA PARA UN PROPÓSITO PARTICULAR. Véase la                        //</span></div>
+<div class="line"><span class="comment">// Licencia Pública General de GNU para más detalles.                                       //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Debería haber recibido una copia de la Licencia Pública General junto                    //</span></div>
+<div class="line"><span class="comment">// con este programa. Si no ha sido así, escriba a la Free Software                         //</span></div>
+<div class="line"><span class="comment">// Foundation, Inc., en 675 Mass Ave, Cambridge, MA 02139, EEUU.                            //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment"></span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;Definiciones.hpp&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;MatrizBand.hpp&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;ResuelveTridiagonal.hpp&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="VectorExtendido_8hpp.html">VectorExtendido.hpp</a>&quot;</span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> RevisionConsumoMemoriaMatrizBandada(<span class="keywordtype">void</span>);</div>
+<div class="line"><span class="keywordtype">void</span> ResuelveEDP(<span class="keywordtype">void</span>);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">   <span class="keywordtype">int</span> i;</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Ejemplo de una ecuación diferencial parcial en 1D</span></div>
+<div class="line">   <span class="comment">// -Uxx + Ux = 0</span></div>
+<div class="line">   <span class="comment">// 0 &lt; U &lt; 1</span></div>
+<div class="line">   <span class="comment">// U(0)=0 y U(1)=1</span></div>
+<div class="line"></div>
+<div class="line">   </div>
+<div class="line">   ldouble a=0;             <span class="comment">// Inicio dominio</span></div>
+<div class="line">   ldouble c=1;             <span class="comment">// Fin dominio</span></div>
+<div class="line">   <span class="keywordtype">int</span> M=500;               <span class="comment">// Partición</span></div>
+<div class="line">   <span class="keywordtype">int</span> N=M-2;               <span class="comment">// Nodos interiores</span></div>
+<div class="line">   ldouble h=(c-a)/(M-1);   <span class="comment">// Incremento en la malla</span></div>
+<div class="line">   ldouble Y0=0.0;          <span class="comment">// Condición inicial en el inicio del dominio</span></div>
+<div class="line">   ldouble Y1=1.0;          <span class="comment">// Condición inicial en el fin del dominio</span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">   MatrizBand *A = <span class="keyword">new</span> MatrizBand(N,N,3,<span class="stringliteral">&quot;A&quot;</span>);</div>
+<div class="line">   <a name="_a0"></a><a class="code" href="classVector.html">Vector</a> *b = <span class="keyword">new</span> <a class="code" href="classVector.html">Vector</a>(N,<span class="stringliteral">&quot;Lado Derecho&quot;</span>);</div>
+<div class="line">   <a class="code" href="classVector.html">Vector</a> *x = <span class="keyword">new</span> <a class="code" href="classVector.html">Vector</a>(N,<span class="stringliteral">&quot;Solucion Sistema Lineal&quot;</span>);</div>
+<div class="line">   </div>
+<div class="line">   <a name="_a1"></a><a class="code" href="classVectorExtendido.html">VectorExtendido</a> *t = <span class="keyword">new</span> <a class="code" href="classVectorExtendido.html">VectorExtendido</a>(M,x,<span class="stringliteral">&quot;Solucion Total&quot;</span>);</div>
+<div class="line">   t-&gt;<a name="a2"></a><a class="code" href="classVectorExtendido.html#a31837c79089c177f1c147f770f8fa853">inicializa</a>(0,Y0);</div>
+<div class="line">   <span class="keywordflow">for</span> (i = 0; i &lt; N; i++) t-&gt;<a class="code" href="classVectorExtendido.html#a31837c79089c177f1c147f770f8fa853">inicializa</a>(i+1,i);</div>
+<div class="line">   t-&gt;<a class="code" href="classVectorExtendido.html#a31837c79089c177f1c147f770f8fa853">inicializa</a>(i+1,Y1);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">   ldouble P=2/(h*h);</div>
+<div class="line">   ldouble Q=-1/(h*h)+1/(2*h);</div>
+<div class="line">   ldouble R=-1/(h*h)-1/(2*h);</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Primer renglon de la matriz A y vector b</span></div>
+<div class="line">   A-&gt;asigna(0,0,P);</div>
+<div class="line">   A-&gt;asigna(0,1,Q);</div>
+<div class="line">   b-&gt;<a name="a3"></a><a class="code" href="classVector.html#a59bec84e428424460ac6a77d41af752a">asigna</a>(0,-Y0*R);</div>
+<div class="line">   <span class="comment">// Renglones intermedios de la matriz A y vector b</span></div>
+<div class="line">   <span class="keywordflow">for</span>(i=1;i &lt;N-1;i++) </div>
+<div class="line">   {</div>
+<div class="line">     A-&gt;asigna(i,i-1,R);</div>
+<div class="line">     A-&gt;asigna(i,i,P);</div>
+<div class="line">     A-&gt;asigna(i,i+1,Q);</div>
+<div class="line">   }</div>
+<div class="line">   <span class="comment">// Relglon final de la matriz A y vector b</span></div>
+<div class="line">   A-&gt;asigna(N-1,N-2,R);</div>
+<div class="line">   A-&gt;asigna(N-1,N-1,P);</div>
+<div class="line"></div>
+<div class="line">   b-&gt;<a class="code" href="classVector.html#a59bec84e428424460ac6a77d41af752a">asigna</a>(N-1,-Y1*Q);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">   <span class="comment">//~ A-&gt;visualiza(0);</span></div>
+<div class="line">   </div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Resuleve el sistema lineal Ax=b</span></div>
+<div class="line">   ResuelveTridiagonal rs(A);</div>
+<div class="line">   rs.resuelve(x,b);</div>
+<div class="line">   </div>
+<div class="line">   <span class="comment">//~ x-&gt;visualiza(0,1,1);</span></div>
+<div class="line"></div>
+<div class="line">   t-&gt;<a name="a4"></a><a class="code" href="classVectorExtendido.html#a14e959a307562c63ffcf6656f97fe1b3">visualiza</a>(0,1,1);</div>
+<div class="line"></div>
+<div class="line">   </div>
+<div class="line">   <span class="keyword">delete</span> A;</div>
+<div class="line">   <span class="keyword">delete</span> b;</div>
+<div class="line">   <span class="keyword">delete</span> t;</div>
+<div class="line">   <span class="keyword">delete</span> x;   </div>
+<div class="line">   </div>
+<div class="line">   <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el SÃ¡bado, 20 de Febrero de 2016 08:59:16 por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

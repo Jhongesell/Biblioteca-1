@@ -1,0 +1,5 @@
+<map id="Geometria_2D" name="Geometria_2D">
+<area shape="rect" id="node3" href="$classGeometria__2DRectangulos.html" title="Clase para generar una geometría homogénea en dos dimensiones usando rectángulos. " alt="" coords="5,155,197,181"/>
+<area shape="rect" id="node4" href="$classGeometria__2DTriangulos.html" title="Clase para generar una geometría homogénea en dos dimensiones usando triángulos. " alt="" coords="221,155,400,181"/>
+<area shape="rect" id="node2" href="$classGeometria.html" title="Clase base para generar una geometria. " alt="" coords="160,5,251,32"/>
+</map>

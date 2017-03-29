@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>EjemploMatrizDispersa.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.8 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>PÃ¡gina&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>PÃ¡ginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">EjemploMatrizDispersa.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>Esta clase implementa los componentes para el trabajar con matrices dispersas de punto flotante</p>
+<div class="fragment"><div class="line"><span class="comment">// Programa para usar la clase de matriz Dispersa                                           //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Análisis y Diseño y Programación:                                                        //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Nombre:   Antonio Carrillo Ledesma                                                       //</span></div>
+<div class="line"><span class="comment">// E-mail:   acl@www.mmc.igeofcu.unam.mx                                                    //</span></div>
+<div class="line"><span class="comment">// Página:   http://www.mmc.igeofcu.unam.mx/acl                                             //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Este programa es software libre. Puede redistribuirlo y/o modificarlo                    //</span></div>
+<div class="line"><span class="comment">// bajo los términos de la Licencia Pública General de GNU según es                         //</span></div>
+<div class="line"><span class="comment">// publicada por la Free Software Foundation, bien de la versión 2 de                       //</span></div>
+<div class="line"><span class="comment">// dicha Licencia o bien (según su elección) de cualquier versión                           //</span></div>
+<div class="line"><span class="comment">// posterior.                                                                               //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Este programa se distribuye con la esperanza de que sea útil, pero SIN                   //</span></div>
+<div class="line"><span class="comment">// NINGUNA GARANTÍA, incluso sin la garantía MERCANTIL implícita o sin                      //</span></div>
+<div class="line"><span class="comment">// garantizar la CONVENIENCIA PARA UN PROPÓSITO PARTICULAR. Véase la                        //</span></div>
+<div class="line"><span class="comment">// Licencia Pública General de GNU para más detalles.                                       //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">// Debería haber recibido una copia de la Licencia Pública General junto                    //</span></div>
+<div class="line"><span class="comment">// con este programa. Si no ha sido así, escriba a la Free Software                         //</span></div>
+<div class="line"><span class="comment">// Foundation, Inc., en 675 Mass Ave, Cambridge, MA 02139, EEUU.                            //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment">//                                                                                          //</span></div>
+<div class="line"><span class="comment"></span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;Definiciones.hpp&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="MatrizDispersa_8hpp.html">MatrizDispersa.hpp</a>&quot;</span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">   <span class="keywordtype">int</span> i, j, k, xcol;</div>
+<div class="line"></div>
+<div class="line">   <span class="keyword">const</span> <span class="keywordtype">int</span> TAM = 5;</div>
+<div class="line">   ldouble A[TAM][TAM] = {</div>
+<div class="line">     {0.2,0.0,0.0,0.0,1.0},</div>
+<div class="line">     {0.1,0.0,1.0,0.0,1.0},</div>
+<div class="line">     {0.0,1.0,6.0,1.0,0.0},</div>
+<div class="line">     {0.0,0.0,1.0,8.0,4.0},</div>
+<div class="line">     {2.9,0.0,0.0,0.0,7.0}</div>
+<div class="line">   }; </div>
+<div class="line">   </div>
+<div class="line">   <a name="_a0"></a><a class="code" href="classMatrizDispersa.html">MatrizDispersa</a> *a = <span class="keyword">new</span> <a class="code" href="classMatrizDispersa.html">MatrizDispersa</a>(TAM,TAM,3,<span class="stringliteral">&quot;A&quot;</span>);</div>
+<div class="line">   <span class="keywordflow">for</span> (i = 0; i &lt; TAM; i++) a-&gt;convierte(A[i],i,TAM);</div>
+<div class="line"></div>
+<div class="line">   a-&gt;visualiza(0);</div>
+<div class="line">   a-&gt;<a name="a1"></a><a class="code" href="classMatrizDispersa.html#a323a9f98b4e3ab82557d3c8f128652da">visualizaMatricesInternas</a>();</div>
+<div class="line">     </div>
+<div class="line">   <a name="_a2"></a><a class="code" href="classVector.html">Vector</a> *c = <span class="keyword">new</span> <a class="code" href="classVector.html">Vector</a>(TAM,<span class="stringliteral">&quot;c&quot;</span>);</div>
+<div class="line">   <a class="code" href="classVector.html">Vector</a> *b = <span class="keyword">new</span> <a class="code" href="classVector.html">Vector</a>(TAM,1.0);</div>
+<div class="line">   a-&gt;<a name="a3"></a><a class="code" href="classMatrizDispersa.html#a3a158c21d64ad8d2c3c481f07ee38bc5">multiplica</a>(b,c);</div>
+<div class="line">   c-&gt;<a name="a4"></a><a class="code" href="classVector.html#a956c353e91d10aefdb1cfcc1548d6b6b">visualiza</a>(1);</div>
+<div class="line">   </div>
+<div class="line">   </div>
+<div class="line">   <span class="keyword">delete</span> b;</div>
+<div class="line">   <span class="keyword">delete</span> c;</div>
+<div class="line"></div>
+<div class="line">   <span class="keyword">delete</span> a;</div>
+<div class="line">   </div>
+<div class="line">   <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el SÃ¡bado, 20 de Febrero de 2016 08:55:03 por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

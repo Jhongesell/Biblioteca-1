@@ -1,0 +1,6 @@
+<map id="Matriz_Base" name="Matriz_Base">
+<area shape="rect" id="node2" href="$classMatriz.html" title="Clase base para el trabajar con matrices de punto flotante. " alt="" coords="26,80,87,107"/>
+<area shape="rect" id="node4" href="$classMatrizInt.html" title="Clase para el trabajar con matrices con etradas enteras. " alt="" coords="111,80,189,107"/>
+<area shape="rect" id="node5" href="$classMatrizTamanoVariable.html" title="Clase para el trabajar con matrices de tamaño variable. " alt="" coords="213,80,375,107"/>
+<area shape="rect" id="node3" href="$classMatrizDensa.html" title="Clase para el trabajar con matrices densas de punto flotante. " alt="" coords="5,155,108,181"/>
+</map>
